@@ -13,15 +13,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('combined'));
 
 // GET POST DATA
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded({
-  extended: true
-})); // to support URL-encoded bodies
+app.use(express.json()); // to support JSON-encoded bodies
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+); // to support URL-encoded bodies
 
 // Template engine
-app.engine('hbs', handlebars.engine({
-  extname: '.hbs'
-}));
+app.engine(
+    'hbs',
+    handlebars.engine({
+        extname: '.hbs',
+    }),
+);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
@@ -31,5 +36,5 @@ console.log('PATH: ', path.join(__dirname, 'resources/views'));
 route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+    console.log(`Example app listening on port ${port}`);
 });
