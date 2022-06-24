@@ -1,15 +1,17 @@
 @import 'variables';
 
-.test {
-    font-size: 1rem;
-    background-color: $red-color;
-    width: 100px;
+.card-course-item {
+    margin-top: 16px;
 }
 
-h1 {
-    color: $red-color;
+.user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50;
+    margin-right: 4px;
 }
 
-h2 {
-    color: $red-color;
+.checkbox-select-all-options {
+    width: 160px;
+    margin: 0 16px;
 }

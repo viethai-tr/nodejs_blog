@@ -4,8 +4,8 @@ const router = express.Router();
 const newsController = require('../app/controllers/NewsController');
 
 // newsController.index
-router.use('/detail', newsController.showDetail);
-router.use('/latest', newsController.showDetailLatest);
+router.get('/detail', newsController.showDetail);
+router.get('/latest', newsController.showDetailLatest);
 
 // router.use('/', newsController.index);
 

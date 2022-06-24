@@ -8,7 +8,8 @@
     "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "postinstall": "patch-package",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "formatcode": "lint-staged"
+    "formatcode": "lint-staged",
+    "formatoffline": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,scss}"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,11 @@
   },
   "dependencies": {
     "express": "^4.18.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.4",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-slug-generator": "^1.0.4",
     "morgan": "^1.10.0",
     "patch-package": "^6.4.7"
   },
